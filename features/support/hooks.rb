@@ -3,11 +3,15 @@ Before do
     # page.driver.browser.manage.window.maximize
 
     @homePage = HomePage.new
-end
+    @produtoPage = ProdutoPage.new
+    @listaBuscaPage = ListaBuscaPage.new
+    @itensCarrinhoPage = ItensCarrinhoPage.new
+    @resumoPedidoPage = ResumoPedidoPage.new
+    $globalHelpers = Helpers.new
 
-Before('@produto') do
     @homePage.go
 end
+
 
 After do |scenario|
     tempShot = page.save_screenshot("log/tempShot.png")
