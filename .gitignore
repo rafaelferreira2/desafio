@@ -1,1 +1,4 @@
+log/*.json
+log/*.html
+log/*.png
 Gemfile.lock
