@@ -14,6 +14,7 @@ class BuscaProduto
     end
 
     def digita_busca(busca)
+        $globalHelpers.autorizar_cookie
         sessao_busca.find('#input-search').set busca
     end
 

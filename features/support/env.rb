@@ -3,7 +3,6 @@ require 'capybara/cucumber'
 require "factory_bot"
 require 'selenium-webdriver'
 
-# require_relative "../spec/factories/factories"
 World(FactoryBot::Syntax::Methods)
 
 CONFIG = YAML.load_file(File.join(Dir.pwd, "features/support/config/#{ENV["ENV_TYPE"]}.yaml"))
@@ -28,9 +27,7 @@ end
 
 
 Capybara.configure do |config|
-    config.default_driver = @driver
-    config.app_host = CONFIG["url"]
-    config.default_max_wait_time = 30
-
-    # config.include FactoryBot::Syntax::Methods
+  config.default_driver = @driver
+  config.app_host = CONFIG["url"]
+  config.default_max_wait_time = 45
 end

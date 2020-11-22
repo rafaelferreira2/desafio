@@ -4,16 +4,13 @@ Quando("adiciono {int} unidade desse produto ao carrinho") do |quantidade_produt
     @listaBuscaPage.produto_alvo(@produto[:nome])
 
     @pontos_unidade_produto = @produtoPage.add_produto(@produto)
-    @itensCarrinhoPage.add_quantidade(quantidade_produto)
-    @total_pontos_produto = @pontos_unidade_produto * quantidade_produto
-end
-
-Quando("acrescento {int} unidade") do |quantidade|    
-    @qtd_produto_atualizada = @itensCarrinhoPage.add_quantidade(quantidade)
+    qtd_produto_atualizada = @itensCarrinhoPage.add_quantidade(quantidade_produto)
+    @total_pontos_produto = @itensCarrinhoPage.total_pontos_produto(@pontos_unidade_produto, qtd_produto_atualizada)
 end
 
 Quando("removo {int} unidade desse produto no carrinho") do |quantidade|    
-    @qtd_produto_atualizada = @itensCarrinhoPage.remove_quantidade(quantidade)
+    qtd_produto_atualizada = @itensCarrinhoPage.remove_quantidade(quantidade)
+    @total_pontos_produto = @itensCarrinhoPage.total_pontos_produto(@pontos_unidade_produto, qtd_produto_atualizada)
 end
 
 Quando("removo esse produto") do
@@ -22,6 +19,10 @@ end
 
 Quando("fecho o pedido") do
     @resumoPedidoPage.fecha_pedido
+end
+
+Quando("utilizo o cupom {string}") do |cupom|
+    @resumoPedidoPage.aplica_cupom(cupom)
 end
 
 Então("devo ver o produto selecionado") do
@@ -39,4 +40,8 @@ end
   
 Então("devo ver a tela de autenticação") do
     expect(@resumoPedidoPage.page_autentica_exibida).to be true
+end
+  
+Então("devo ver a mensagem de erro {string}") do |msg_esperada|
+    expect(@resumoPedidoPage.alerta_topo).to eql msg_esperada
 end

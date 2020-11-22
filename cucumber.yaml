@@ -4,7 +4,6 @@ ci: -p dev -p headless -p json -p pretty
 
 dev: ENV_TYPE=dev
 
-firefox: BROWSER=firefox
 chrome: BROWSER=chrome
 headless: BROWSER=headless
 

@@ -26,4 +26,18 @@ class ResumoPedidoPage
         page.find('#username').visible?
     end
 
+    def form_cupom
+        box.find('div.form--cupom')
+    end
+
+    def aplica_cupom(cupom)
+        $globalHelpers.checkpoint
+        form_cupom.find('#cc-cupom-field').set cupom
+        click_link('Aplicar')
+    end
+
+    def alerta_topo
+        find('#cc-header-notification p').text
+    end
+
 end
