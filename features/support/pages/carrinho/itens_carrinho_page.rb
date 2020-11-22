@@ -67,9 +67,6 @@ class ItensCarrinhoPage
         if(btn_remove.visible?)
             btn_remove.click
         end
-        # within(sessao_qtd_produto) do
-        #     click_link 'Remover'
-        # end
     end
 
     def pontos_produto_carrinho

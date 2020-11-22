@@ -18,7 +18,7 @@ Funcionalidade: Adicionar produtos ao carrinho
         | "sanduicheira"  |
         | "quebra_cabeca" |
         | "camisa"        |
-    
+
 
     @adiciona_unidade
     Esquema do Cenario: Adiciona 3 unidades ao carrinho
@@ -35,7 +35,7 @@ Funcionalidade: Adicionar produtos ao carrinho
 
 
     @remove_unidade
-    Esquema do Cenario: Remove 1 unidade do produto ao carrinho
+    Esquema do Cenario: Remove 1 unidade do produto no carrinho
         Dado que <codigo_produto> é um produto 
         Quando adiciono 3 unidade desse produto ao carrinho
         E removo 1 unidade desse produto no carrinho
@@ -44,13 +44,13 @@ Funcionalidade: Adicionar produtos ao carrinho
 
         Exemplos:
         | codigo_produto  |
-        # | "quebra_cabeca" |
         | "camisa"        |
         | "sanduicheira"  |
+        | "quebra_cabeca" |
 
 
     @remove_produto
-    Esquema do Cenario: Remove produto ao carrinho
+    Esquema do Cenario: Remove produto no carrinho
         Dado que <codigo_produto> é um produto 
         Quando adiciono 1 unidade desse produto ao carrinho
         E removo esse produto
@@ -58,8 +58,8 @@ Funcionalidade: Adicionar produtos ao carrinho
 
         Exemplos:
         | codigo_produto  |
-        | "sanduicheira"  |
         | "quebra_cabeca" |
+        | "sanduicheira"  |
         | "camisa"        |
 
 
