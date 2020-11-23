@@ -1,15 +1,15 @@
 # Desafio técnico automação
-## Necessário:
+## Necessário
 - Ter um ambiente configurado com a ferramenta Docker CE e o Docker compose que pode ser instalado através dos links abaixo.
 
-## Linux :
+## Linux
 - Ubuntu, Mint ou ElementaryOS [Acessar](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 - Fedora [Acessar](https://docs.docker.com/install/linux/docker-ce/fedora/)
 - Debian [Acessar](https://docs.docker.com/install/linux/docker-ce/debian/)
 
 - Docker compose [Acessar](https://docs.docker.com/compose/install/)
 
-## Mac:
+## Mac
 - Mac [Acessar](https://docs.docker.com/docker-for-mac/install/)
 
 ## Windows
@@ -22,11 +22,12 @@ Requisitos
 
 
 # Execução
-- Após clonar o projeto, acesse a pasta raiz e execute o seguinte comando para preparar a estrutura nacessária para a execução dos testes.
-  "docker-compose build" 
-- ATENÇÃO: na primeira execução é necessário aguardar alguns minutos para conclusão dos downloads necessários.
+- Após clonar o projeto, acesse a pasta raiz e execute o seguinte comando para preparar a estrutura necessária para a execução dos testes.
+-  ```docker-compose build```
+
+- **ATENÇÃO:** Na primeira execução é necessário aguardar alguns minutos para conclusão dos downloads necessários.
 - Em seguida execute o seguinte comando para iniciar a execução dos testes:
- "docker-compose build"
+-  ```docker-compose up```
 
 # Report
 - Para conferir o resultado dos testes após a execução basta acessar o diretório log na raiz do projeto e verificar o arquivo _report.html_
