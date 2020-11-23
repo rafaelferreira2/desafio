@@ -30,7 +30,7 @@ Requisitos
 -  ```docker-compose up```
 
 # Report
-- Para conferir o resultado dos testes após a execução basta acessar o diretório log na raiz do projeto e verificar o arquivo _report.html_
+- Para conferir o resultado dos testes após a execução basta acessar o diretório log na raiz do projeto e verificar o arquivo ```report.html```
 
 # Sugestão de melhorias
 - Realizar análise do projeto buscando melhorias performance na troca entre páginas.
