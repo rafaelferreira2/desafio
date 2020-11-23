@@ -19,7 +19,7 @@ Funcionalidade: Busca de produtos
         | "camisa"        |
         
     @busca_na_lista
-    Esquema do Cenario: Busca de produto
+    Esquema do Cenario: Busca de produto dropdown
         Dado que <codigo_produto> é um produto 
         Quando busco esse produto pelo nome
         Então devo ver suas informações

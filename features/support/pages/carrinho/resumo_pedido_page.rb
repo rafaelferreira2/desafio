@@ -31,9 +31,9 @@ class ResumoPedidoPage
     end
 
     def aplica_cupom(cupom)
-        $globalHelpers.checkpoint
         form_cupom.find('#cc-cupom-field').set cupom
         click_link('Aplicar')
+        $globalHelpers.checkpoint
     end
 
     def alerta_topo

@@ -1,6 +1,8 @@
 Before do
-    page.current_window.resize_to(1366, 768)
-    # page.driver.browser.manage.window.maximize
+
+    if (ENV["BROWSER"] == "chrome")
+        page.current_window.resize_to(1366, 768)
+    end
 
     @homePage = HomePage.new
     @produtoPage = ProdutoPage.new

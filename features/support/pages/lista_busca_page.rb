@@ -10,7 +10,6 @@ class ListaBuscaPage
     end
 
     def produto_alvo(alvo)
-        $globalHelpers.checkpoint
         lista_produtos.find('div.product-list__element div.card-name', text: alvo).click
     end
 

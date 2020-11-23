@@ -14,7 +14,6 @@ class BuscaProduto
     end
 
     def digita_busca(busca)
-        $globalHelpers.autorizar_cookie
         sessao_busca.find('#input-search').set busca
     end
 
@@ -26,7 +25,6 @@ class BuscaProduto
         digita_busca(busca)
         lista = sessao_busca.find('#typeaheadDropdown')
         lista.find('li.typeaheadProduct', text: busca).click
-        sleep 5
     end
 
     def busca_por_nome(busca)

@@ -1,0 +1,8 @@
+
+cucumber-chrome:
+  build: .
+  command: bundle exec cucumber -p dev -p ci -p html -p pretty
+  volumes:
+    - .:/myapp
+  ports:
+    - "4777:4777"

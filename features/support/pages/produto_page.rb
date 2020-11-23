@@ -51,7 +51,7 @@ class ProdutoPage
     end
 
     def produto_pontos
-        pontos = form_produto.all('div.partners-tab__content-price-real span')[0].text
+        pontos = form_produto.all('div.info__box div.partners-tab__content-price-real span')[0].text
         pontos.sub(".","")
     end
 
