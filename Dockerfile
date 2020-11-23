@@ -38,7 +38,5 @@ COPY Gemfile* /myapp/
 
 RUN gem install bundler && \
     bundle install
-
 ADD . /myapp
-RUN ls -l
 run chmod -R 777 ./log
