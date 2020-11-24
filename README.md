@@ -33,5 +33,7 @@ Requisitos
 - Para conferir o resultado dos testes após a execução basta acessar o diretório log na raiz do projeto e verificar o arquivo ```report.html```
 
 # Sugestão de melhorias
-- Realizar análise do projeto buscando melhorias performance na troca entre páginas.
+- Realizar análise do projeto buscando melhorias de performance na troca entre páginas.
 - Cenários como clicar em um produto após realizar a busca e carregar as informações do produto no carrinho as páginas demoram a carregar.
+- Em algumas execuções após clicar em um produto ou acessar o carrinho foi apresentada apenas uma tela em branco.
+- Uma solução temporária foi adicionar um tempo de espera máximo de 45 segundos.
